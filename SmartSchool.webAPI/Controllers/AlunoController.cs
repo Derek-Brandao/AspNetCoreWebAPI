@@ -88,7 +88,7 @@ namespace SmartSchool.webAPI.Controllers
         [HttpDelete("{id}")]
         public IActionResult Delete(int id)
         {
-            return Ok();
+            return Ok(); 
         }
     }
 }
