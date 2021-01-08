@@ -8,7 +8,7 @@ using SmartSchool.webAPI.Data;
 namespace SmartSchool.webAPI.Migrations
 {
     [DbContext(typeof(SmartContext))]
-    [Migration("20210107143904_init")]
+    [Migration("20210108130441_init")]
     partial class init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -49,42 +49,42 @@ namespace SmartSchool.webAPI.Migrations
                             Id = 2,
                             Nome = "Paula",
                             Sobrenome = "Isabela",
-                            Telefone = "3354288"
+                            Telefone = "33225555"
                         },
                         new
                         {
                             Id = 3,
                             Nome = "Laura",
                             Sobrenome = "Antonia",
-                            Telefone = "55668899"
+                            Telefone = "33225555"
                         },
                         new
                         {
                             Id = 4,
                             Nome = "Luiza",
                             Sobrenome = "Maria",
-                            Telefone = "6565659"
+                            Telefone = "33225555"
                         },
                         new
                         {
                             Id = 5,
                             Nome = "Lucas",
                             Sobrenome = "Machado",
-                            Telefone = "565685415"
+                            Telefone = "33225555"
                         },
                         new
                         {
                             Id = 6,
                             Nome = "Pedro",
                             Sobrenome = "Alvares",
-                            Telefone = "456454545"
+                            Telefone = "33225555"
                         },
                         new
                         {
                             Id = 7,
                             Nome = "Paulo",
                             Sobrenome = "José",
-                            Telefone = "9874512"
+                            Telefone = "33225555"
                         });
                 });
 
@@ -266,7 +266,7 @@ namespace SmartSchool.webAPI.Migrations
                         new
                         {
                             Id = 5,
-                            Nome = "Programação",
+                            Nome = "Progamação",
                             ProfessorId = 5
                         });
                 });
@@ -315,13 +315,13 @@ namespace SmartSchool.webAPI.Migrations
             modelBuilder.Entity("SmartSchool.webAPI.Models.AlunoDisciplina", b =>
                 {
                     b.HasOne("SmartSchool.webAPI.Models.Aluno", "Aluno")
-                        .WithMany()
+                        .WithMany("AlunosDisciplinas")
                         .HasForeignKey("AlunoId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("SmartSchool.webAPI.Models.Disciplina", "Disciplina")
-                        .WithMany("AlunoDisciplinas")
+                        .WithMany("AlunosDisciplinas")
                         .HasForeignKey("DisciplinaId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();

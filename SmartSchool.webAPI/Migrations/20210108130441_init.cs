@@ -86,32 +86,32 @@ namespace SmartSchool.webAPI.Migrations
             migrationBuilder.InsertData(
                 table: "Alunos",
                 columns: new[] { "Id", "Nome", "Sobrenome", "Telefone" },
-                values: new object[] { 2, "Paula", "Isabela", "3354288" });
+                values: new object[] { 2, "Paula", "Isabela", "33225555" });
 
             migrationBuilder.InsertData(
                 table: "Alunos",
                 columns: new[] { "Id", "Nome", "Sobrenome", "Telefone" },
-                values: new object[] { 3, "Laura", "Antonia", "55668899" });
+                values: new object[] { 3, "Laura", "Antonia", "33225555" });
 
             migrationBuilder.InsertData(
                 table: "Alunos",
                 columns: new[] { "Id", "Nome", "Sobrenome", "Telefone" },
-                values: new object[] { 4, "Luiza", "Maria", "6565659" });
+                values: new object[] { 4, "Luiza", "Maria", "33225555" });
 
             migrationBuilder.InsertData(
                 table: "Alunos",
                 columns: new[] { "Id", "Nome", "Sobrenome", "Telefone" },
-                values: new object[] { 5, "Lucas", "Machado", "565685415" });
+                values: new object[] { 5, "Lucas", "Machado", "33225555" });
 
             migrationBuilder.InsertData(
                 table: "Alunos",
                 columns: new[] { "Id", "Nome", "Sobrenome", "Telefone" },
-                values: new object[] { 6, "Pedro", "Alvares", "456454545" });
+                values: new object[] { 6, "Pedro", "Alvares", "33225555" });
 
             migrationBuilder.InsertData(
                 table: "Alunos",
                 columns: new[] { "Id", "Nome", "Sobrenome", "Telefone" },
-                values: new object[] { 7, "Paulo", "José", "9874512" });
+                values: new object[] { 7, "Paulo", "José", "33225555" });
 
             migrationBuilder.InsertData(
                 table: "Professores",
@@ -161,7 +161,7 @@ namespace SmartSchool.webAPI.Migrations
             migrationBuilder.InsertData(
                 table: "Disciplinas",
                 columns: new[] { "Id", "Nome", "ProfessorId" },
-                values: new object[] { 5, "Programação", 5 });
+                values: new object[] { 5, "Progamação", 5 });
 
             migrationBuilder.InsertData(
                 table: "AlunosDisciplinas",
