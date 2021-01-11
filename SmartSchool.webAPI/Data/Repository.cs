@@ -1,6 +1,7 @@
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
 using SmartSchool.webAPI.Models;
+using SmartSchool.webAPI.Data;
 
 namespace SmartSchool.webAPI.Data
 {
