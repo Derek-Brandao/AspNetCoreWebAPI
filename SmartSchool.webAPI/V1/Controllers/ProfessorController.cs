@@ -6,10 +6,11 @@ using Microsoft.EntityFrameworkCore;
 using SmartSchool.webAPI.Data;
 using SmartSchool.webAPI.Models;
 
-namespace SmartSchool.webAPI.Controllers
+namespace SmartSchool.webAPI.V1.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [ApiVersion("1.0")]
+    [Route("api/v{version:apiVersion}/[controller]")]
     public class ProfessorController : ControllerBase
     {
         public readonly IRepository _repo;

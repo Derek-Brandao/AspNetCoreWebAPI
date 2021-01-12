@@ -5,25 +5,37 @@ using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using SmartSchool.webAPI.Data;
-using SmartSchool.webAPI.Dtos;
+using SmartSchool.webAPI.V1.Dtos;
 using SmartSchool.webAPI.Models;
 
-namespace SmartSchool.webAPI.Controllers
-{
+namespace SmartSchool.webAPI.V1.Controllers
+{   
+    /// <summary>
+    /// 
+    /// </summary>
     [ApiController]
-    [Route("api/[controller]")]
+    [ApiVersion("1.0")]
+    [Route("api/v{version:apiVersion}/[controller]")]
+    
     public class AlunoController : ControllerBase
     {
         public readonly IRepository _repo;
         private readonly IMapper _mapper;
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="repo"></param>
+        /// <param name="mapper"></param>
         public AlunoController(IRepository repo,
                                 IMapper mapper)
         {
             _mapper = mapper;
             _repo = repo;
         }
-
-        // api/aluno
+        /// <summary>
+        ///  Rota para pegar todos os alunos.
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public IActionResult Get()
         {
@@ -49,7 +61,11 @@ namespace SmartSchool.webAPI.Controllers
             return Ok(alunoDto);
         }
 
-        // api/alunobyId
+        /// <sumary>
+        /// apdkasos
+        /// </sumary>/// <sumary>
+        /// 
+        /// </sumary>
         [HttpPost]
         public IActionResult Post(AlunoRegistrarDto model)
         {
